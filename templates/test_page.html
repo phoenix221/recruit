@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<form action="/result/" method="post">
+    {% csrf_token %}
+    {% for question in q %}
+    <ul>
+        <li>{{ question.choice_text }}</li>
+        <li>
+            <label class="checkbox">
+                <input type="checkbox" name="question[]" value="true">True
+            </label>
+        </li>
+        <li>
+            <label class="checkbox">
+                <input type="checkbox" name="question[]" value="false">False
+            </label>
+        </li>
+    </ul>
+    {% endfor %}
+    <input type="submit" value="Готово">
+</form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recruit</title>
+</head>
+<body>
+    {% for m in main %}
+    <ul>
+        <li><a href="{{ m.get_absolute_url}}" >{{ m.recruit_name }}</a></li>
+    </ul>
+    {% endfor %}
+</body>
+</html>

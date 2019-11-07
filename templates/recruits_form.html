@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recruits_Form</title>
+</head>
+<body>
+    <form action="/recruits/" method="post" name="recriut">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Далее" />
+</form>
+</body>
+</html>
